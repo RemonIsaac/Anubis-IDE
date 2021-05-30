@@ -315,7 +315,7 @@ class UI(QMainWindow):
         filemenu.addAction(Open_Action)
 
         py_action = QAction('Python', self)
-        py_action.triggered.connect(self.pyhton_analyzer)
+        py_action.triggered.connect(self.python_detec)
         csharp_action = QAction('C#', self)
         csharp_action.triggered.connect(self.csharp_detec)
 
@@ -328,7 +328,7 @@ class UI(QMainWindow):
         self.setWindowIcon(QtGui.QIcon('Anubis.png'))
         
 
-        widget = Widget()
+        widget = Widget(self)
 
         self.setCentralWidget(widget)
         self.show()
